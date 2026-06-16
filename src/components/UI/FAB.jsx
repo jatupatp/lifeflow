@@ -1,6 +1,6 @@
 import './FAB.css';
 
-export default function FAB({ icon: Icon, onClick, label }) {
+export default function FAB({ icon, onClick, label }) {
   return (
     <button
       className="fab"
@@ -8,7 +8,7 @@ export default function FAB({ icon: Icon, onClick, label }) {
       aria-label={label}
       type="button"
     >
-      {Icon && <Icon size={24} />}
+      {icon}
     </button>
   );
 }
