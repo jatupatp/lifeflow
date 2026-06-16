@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { ToastProvider } from './contexts/ToastContext';
 import AppShell from './components/Layout/AppShell';
@@ -15,7 +15,7 @@ function App() {
   return (
     <ThemeProvider>
       <ToastProvider>
-        <BrowserRouter>
+        <HashRouter>
           <AppShell>
             <Routes>
               <Route path="/" element={<Dashboard />} />
@@ -26,7 +26,7 @@ function App() {
               <Route path="/calendar" element={<Calendar />} />
             </Routes>
           </AppShell>
-        </BrowserRouter>
+        </HashRouter>
       </ToastProvider>
     </ThemeProvider>
   );
