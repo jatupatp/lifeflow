@@ -1,0 +1,112 @@
+.habits-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.habits-page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.habits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Habit Card */
+.habit-card {
+  width: 100%;
+  padding: 1.25rem;
+}
+
+.habit-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.habit-card-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.habit-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.habit-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.habit-card-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.habit-streak {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.habit-checkin-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--text-muted);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: var(--text-muted);
+}
+
+.habit-checkin-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.habit-checkin-btn.checked {
+  background: #10b981;
+  border-color: #10b981;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.35);
+}
+
+.habit-heatmap-section {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 767px) {
+  .habit-card {
+    padding: 1rem;
+  }
+
+  .habit-name {
+    font-size: 0.95rem;
+  }
+
+  .habit-checkin-btn {
+    width: 36px;
+    height: 36px;
+  }
+}

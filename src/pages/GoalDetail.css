@@ -1,0 +1,238 @@
+.goal-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.goal-detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+  transition: color 0.2s;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.goal-detail-back:hover {
+  color: var(--accent-primary);
+}
+
+.goal-detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.goal-detail-info {
+  flex: 1;
+}
+
+.goal-detail-color-bar {
+  width: 4px;
+  height: 48px;
+  border-radius: 2px;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.goal-detail-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.goal-detail-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.goal-detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.goal-detail-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Milestone Timeline */
+.milestone-timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin: 2rem 0;
+}
+
+.milestone-line {
+  position: absolute;
+  left: 9px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.milestone-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1.75rem;
+  cursor: pointer;
+}
+
+.milestone-item:last-child {
+  margin-bottom: 0;
+}
+
+.milestone-dot {
+  position: absolute;
+  left: -2rem;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.milestone-dot.completed {
+  background: #10b981;
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+}
+
+.milestone-dot.current {
+  background: var(--accent-primary);
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(var(--accent-primary-rgb), 0.2);
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+.milestone-dot.future {
+  background: var(--bg-secondary);
+  border: 2px solid var(--text-muted);
+  color: var(--text-muted);
+}
+
+@keyframes pulse-ring {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(var(--accent-primary-rgb), 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(var(--accent-primary-rgb), 0.05);
+  }
+}
+
+.milestone-content {
+  padding: 0.75rem 1rem;
+  border-radius: 0.625rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: background 0.2s;
+}
+
+.milestone-content:hover {
+  background: rgba(var(--accent-primary-rgb), 0.05);
+}
+
+.milestone-title {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.milestone-title.completed {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.milestone-date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* Progress Summary */
+.progress-summary {
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.progress-summary-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.progress-summary-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.progress-bar-lg {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(var(--text-muted-rgb), 0.2);
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.progress-bar-lg-fill {
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  transition: width 0.5s ease;
+}
+
+/* Delete Confirm */
+.delete-confirm {
+  text-align: center;
+}
+
+.delete-confirm-text {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.delete-confirm-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .goal-detail-header {
+    flex-direction: column;
+  }
+
+  .goal-detail-title {
+    font-size: 1.35rem;
+  }
+
+  .goal-detail-actions {
+    align-self: flex-end;
+  }
+}
